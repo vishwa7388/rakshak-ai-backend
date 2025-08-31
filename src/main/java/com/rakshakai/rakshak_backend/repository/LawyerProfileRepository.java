@@ -21,7 +21,7 @@ public interface LawyerProfileRepository extends JpaRepository<LawyerProfile, Lo
     List<LawyerProfile> findByCity(String city);
 
     // Find by verification status
-    List<LawyerProfile> findByGetVerified(boolean isVerified);
+    List<LawyerProfile> findByIsVerified(boolean isVerified);
 
     // Find by verification status with pagination
     Page<LawyerProfile> findByIsVerified(boolean isVerified, Pageable pageable);

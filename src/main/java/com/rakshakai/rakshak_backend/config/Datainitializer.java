@@ -1,3 +1,4 @@
+/*
 package com.rakshakai.rakshak_backend.config;
 
 import com.rakshakai.rakshak_backend.model.*;
@@ -121,4 +122,4 @@ public class Datainitializer implements CommandLineRunner {
         emergencyCase.setCreatedAt(LocalDateTime.now());
         return emergencyCaseRepository.save(emergencyCase);
     }
-}
+}*/

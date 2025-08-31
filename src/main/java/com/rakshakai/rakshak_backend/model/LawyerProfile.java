@@ -18,7 +18,9 @@ public class LawyerProfile {
     @Column(name = "bar_council_number", unique = true)
     private String barCouncilNumber;
 
-    @Column(name = "specializations")
+    @ElementCollection
+    @CollectionTable(name = "lawyer_specializations", joinColumns = @JoinColumn(name = "lawyer_id"))
+    @Column(name = "specialization")
     private List<String> specializations; // CRIMINAL, CIVIL, FAMILY, CORPORATE, etc.
 
     @Column(name = "experience_years")
@@ -45,7 +47,9 @@ public class LawyerProfile {
     @Column(name = "state")
     private String state;
 
-    @Column(name = "languages")
+    @ElementCollection
+    @CollectionTable(name = "lawyer_languages", joinColumns = @JoinColumn(name = "lawyer_id"))
+    @Column(name = "language")
     private List<String> languages; // HINDI, ENGLISH, BENGALI, etc.
 
     @Column(name = "availability_status")
